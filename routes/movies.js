@@ -3,8 +3,8 @@ var router = express.Router();
 
 /* Movies Routes Go Here. */
 
-router.get('/', function (req, res, next) {
-  res.render('movies/index');
+router.get('/', function(req,res,next){
+  res.render('movies/index')
 })
 
 router.get('/new', function(req,res,next){
@@ -12,7 +12,7 @@ router.get('/new', function(req,res,next){
 })
 
 router.post('/', function(req,res,next){
-  res.redirect('/movies')
+  res.redirect('/')
 })
 
 router.get('/:id', function(req,res,next){
@@ -24,11 +24,11 @@ router.get('/:id/edit', function(req,res,next){
 })
 
 router.post('/:id', function(req,res,next){
-  res.redirect('/movies')
+  res.redirect('/')
 })
 
 router.post('/:id/delete', function(req,res,next){
-  res.redirect('/movies')
+  res.redirect('/')
 })
 
 module.exports = router;
