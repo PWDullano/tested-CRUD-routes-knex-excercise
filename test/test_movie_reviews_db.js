@@ -18,7 +18,7 @@ describe('Movie Reviews Database CRUD', function() {
     return knex.seed.run(knex.config);
   });
 
-  xit('should get all movie reviews for a given movie', function () {
+  it('should get all movie reviews for a given movie', function () {
     return Movies().where('title', 'The Great Beyond').first().then(function (movie) {
       return Reviews().where('movie_id', movie.id).then(function (reviews) {
         reviews.should.have.length(2)
