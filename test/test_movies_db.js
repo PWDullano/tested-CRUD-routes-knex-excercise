@@ -35,7 +35,7 @@ describe('Movies CRUD Routes', function() {
       movies.should.have.length(3);
     });
   });
-  xit('should create a movie', function () {
+  it('should create a movie', function () {
     return Movies().insert(theMovie).then(function (results) {
       return Movies().select().then(function (movies) {
         movies.should.have.length(4);
